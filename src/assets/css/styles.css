@@ -1,0 +1,19 @@
+body {
+    background-color: beige;
+}
+#result {
+    background-color: aqua;
+}
+.visible {
+    display: block;
+}
+.invisible {
+    display: none;
+}
+#history {
+    background-color: brown;
+    color: aliceblue;
+}
+#histtable {
+    display: inherit;
+}
