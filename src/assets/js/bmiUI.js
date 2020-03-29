@@ -13,6 +13,8 @@ let classification;
 function buttonClickFunc() {
     size = parseFloat(sizebox.value);
     mass = parseFloat(massbox.value);
+    if (Number.isNaN(size)) {size = 0}
+    if (Number.isNaN(mass)) {mass = 0}
     resultBMI = calcBmi(size, mass).toFixed(2);
     classification = calcClass(mass,size);
     result.innerHTML= `<p>Your BMI is ${resultBMI} and you are ${classification.toLowerCase()}</p>`;

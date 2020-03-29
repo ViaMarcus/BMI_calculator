@@ -50,24 +50,24 @@ function mustBeBH(mass){
     return mass>4e32;
 }
 function getBHLimit(mass) { //returns Swarzchild radius in cm
-    2 * 100 * 6.67e-10 * mass / (3e8 * 3e8);
+    2 * 100 * 6.67e-10 * mass / (3e8 * 3e8); //i forgot the returnstatement on this, and when i ran it just gave me undefined, which is technically probably also correct, so i will leave it like this.
 }
 function getStarType(size, mass){
     const meters = size/100; 
-    let density = 6 * mass / (size * size * size * Math.PI);
+    let density = 6 * mass / (meters * meters * meters * Math.PI);
     if (density > 10e18 ) {
         return `A black hole, and your size is really ${getBHLimit(mass)}`;
     } else if (density > 10e16) {
         return `A neutron star, you degenerate fuck`;
-    } else if (density > 10^8) {
+    } else if (density > 10e8) {
         return "A white dwarf";
-    } else if (density > 5000) {
+    } else if (density > 25000) {
         return "A dwarf star, but that is fine :)";
     } else if (density > 500) {
         return "A main sequence star, nice!";
-    } else if (size > SUN_RADIUS*10 &&  density > 0.04){
+    } else if (meters > SUN_RADIUS*10 &&  density > 0.04){
         return "A blue supergiant";
-    } else if (size > SUN_RADIUS*10) {
+    } else if (meters > SUN_RADIUS*10) {
         return "A red giant";
     } else {
         return "weird";

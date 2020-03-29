@@ -1,8 +1,11 @@
-body {
-    background-color: beige;
+:root {
+    --margy: rgb(248, 204, 161);
+    --bordy: rgb(253, 220, 159);
+    --paddy: rgb(196, 206, 142);
+    --conty: rgb(142, 181, 192);
 }
-#result {
-    background-color: aqua;
+::placeholder {
+    color: black;
 }
 .visible {
     display: block;
@@ -10,10 +13,94 @@ body {
 .invisible {
     display: none;
 }
-#history {
-    background-color: brown;
-    color: aliceblue;
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding:0px;
+    margin: 0px;
+    background-color: var(--margy)
 }
-#histtable {
-    display: inherit;
+#content {
+    border: var(--bordy) 2rem solid;
+    min-height: 100%;
+    display: block;
+    position: relative;
+    margin: 50px;
+    background-color: var(--conty);
+    padding-left: 5rem;
+    padding-bottom: 10px;
+    padding-right: 5rem;
+}
+h1 {
+    padding-top: 5rem;
+}
+#result {
+    font-weight: bold;
+}
+
+#content #paddy {
+    position: absolute;
+    display: block;
+    left: 0em;
+    width: 5rem;
+    background-color: var(--paddy);
+    height: 100%;
+}
+#paddyright {
+    position: absolute;
+    display: block;
+    right: 0em;
+    width: 5rem;
+    background-color: var(--paddy);
+    height: 100%;
+}
+
+#history {
+    color: red;
+}
+table, th, td {
+    border: 2px var(--bordy) solid;
+    padding: 1px;
+    margin: 0;
+}
+th {
+    background-color: grey;
+}
+tr {
+    background-color: var(--conty)  ;
+    width: 100%;
+}
+tr:nth-child(2n+1){
+    background-color: var(--paddy);
+}
+.nth {
+    background-color: black;
+}
+div {
+    display: block;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+table caption {
+    text-align: left;
+    font-size: 200%;
+}
+
+
+input {
+    border: var(--bordy) solid 5px;
+    height: 1.5rem;
+    background-color: var(--conty);
+    margin-left: 5px;
+    font-weight: bold;
+    padding-left: 6px;
+    
+}
+#submit {
+    height: 2.21rem;
+    border: var(--bordy) solid 5px;
+    margin-left: 5px;
+    background-color: var(--conty);
+    font-weight: bold;
 }

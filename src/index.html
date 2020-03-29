@@ -7,31 +7,39 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-    <h1>BMI Calculator</h1>
-    <input type="text" placeholder="Mass, in kg" id="weight">
-    <input type="text" placeholder="Size, in cm" id="height">
-    <button type="submit" id="submit" onclick="buttonClickFunc()">Engage!</button>
+    <div id="content">
+        <div id="paddy"></div>
+        <div id="paddyright"></div>
+        <h1>BMI Calculator</h1>
+        <input type="text" placeholder="Mass, in kg" id="weight">
+        <input type="text" placeholder="Size, in cm" id="height">
+        <button type="submit" id="submit" onclick="buttonClickFunc()">Engage!</button>
 
-    <div id="result" class="invisible">sad</div>
-    <div id="picture">
-        <img src="" alt="">
-    </div>
-    <div id="history">
-        <div id="nohist" class="visible">
-            You have no previous calculations!
+        <div id="result" class="invisible">sad</div>
+        <div id="picture">
+            <img src="" alt="">
         </div>
-        <div id="hist" class="invisible">
-            <table id="histtable">
-                <caption>Calculation History:</caption>
-                <tr>
-                    <th>Weight</th>
-                    <th>Height</th>
-                    <th>BMI</th>
-                    <th>Classification</th>
-                </tr>
-            </table>
+        <div id="history">
+            <div id="nohist" class="visible">
+                This will be history soon!
+            </div>
+            <div id="hist" class="invisible">
+                <table>
+                    <caption>Calculation History:</caption>
+                    <tr>
+                        <th>Weight</th>
+                        <th>Height</th>
+                        <th>BMI</th>
+                        <th>Classification</th>
+                    </tr>
+                <tbody id="histtable">
+
+                </tbody>
+                </table>
+            </div>
         </div>
     </div>
+
     <script src="./assets/js/bmiCalculator.js"></script>
     <script src="./assets/js/bmiUI.js"></script>
 
